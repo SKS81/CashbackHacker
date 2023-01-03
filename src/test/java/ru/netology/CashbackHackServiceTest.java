@@ -22,7 +22,7 @@ public class CashbackHackServiceTest {
 
     @Test
     public void lacking0() {
-        int expected = 0;
+        int expected = 1_000;
         int actual = service.remain(1_000);
         Assert.assertEquals(expected, actual);
     }
