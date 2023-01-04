@@ -4,9 +4,13 @@ public class CashbackHackService {
     private final int boundary = 1_000;
 
     public int remain(int amount) {
-        for (int i = 0; i <= amount; i += 1_000) {
-            if (i == amount && i != 0) return 0;
+
+        for (int i = boundary; i <= amount; i += boundary) {
+            if (i == amount) return 0;
         }
+        int x = Math.abs(-amount);
+        if (x == -amount) return x + boundary;
+
         return boundary - amount % boundary;
     }
 }
