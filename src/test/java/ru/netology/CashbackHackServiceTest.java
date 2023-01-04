@@ -8,6 +8,14 @@ public class CashbackHackServiceTest {
     CashbackHackService service = new CashbackHackService();
 
     @Test
+    public void lacking1_000() {
+        int actual = service.remain(0);
+        int expected = 1_000;
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
     public void lacking200() {
         int actual = service.remain(800);
         int expected = 200;
