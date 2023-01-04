@@ -40,9 +40,17 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void lackingMinus() {
+    public void lackingMinus_Test_1() {
         int actual = service.remain(-1);
         int expected = 1_001;
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void lackingMinus_Test_2() {
+        int actual = service.remain(-3_700);
+        int expected = 4_700;
 
         assertEquals(actual, expected);
     }
